@@ -1,17 +1,30 @@
-# NextJS + TailwindCSS
+# NextJS (TailwindCSS) + NGINX + PM2 
 
-This is a starter template for [Learn Next.js](https://nextjs.org/learn) and [TailwindCSS](https://tailwindcss.com)
+This is a starter template for NextJS + TailwindCSS
 
 
-## Docker
+## Production Build
+The image created by docker is a ready to go NextJS build application with NGINX webserver and PM2
 
-You can run in a docker without installing Node and npm on your local machine
+### Build the image
+```
+docker build -t nextjs-nginx-pm2 .
 
 ```
-docker-compose run --name nextjs-demo -p 3000:3000 --rm app bash
+
+### Run docker image
+
+```
+docker run --name nextjs-nginx -p 80:80 -p 3000:3000 nextjs-nginx-pm2
 
 ```
 
-### First time run in docker
+### NGINX Configuration
 
-`npm i`
+`./nginx/default.conf` to update your configuration for NGINX
+
+`./nginx/entrypoint.sh` to run PM2 and NGINX
+
+## Github Actions
+
+This template is ready for Github Actions. Check the `.github/workflows/docker-image.yml` to update to your configuration.
