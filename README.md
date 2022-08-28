@@ -1,5 +1,7 @@
 # NextJS (TailwindCSS) + NGINX + PM2 
 
+![Doker Buiild](https://github.com/swina/nextjs-nginx-dockerized/actions/workflows/docker-image.yml/badge.svg)
+
 This is a starter template for NextJS + TailwindCSS
 
 
