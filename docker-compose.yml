@@ -22,8 +22,6 @@ services:
     container_name: "api"
     ports: 
       - 9100:9100
-    volumes: 
-      - ./server:/api
     networks: 
       - nextjs-app
 
