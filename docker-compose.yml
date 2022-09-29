@@ -10,6 +10,13 @@ services:
       - 3000:3000
     networks: 
       - nextjs-app
+  nginx: 
+    build: 
+      context: ./nginx
+    ports: 
+      - 80:80
+    networks: 
+      - nextjs-app
   api: 
     build: ./server
     container_name: "api"
