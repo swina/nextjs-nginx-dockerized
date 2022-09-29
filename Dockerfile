@@ -1,5 +1,4 @@
 FROM node:16 AS deps
-RUN apk add --no-cache libc6-compat
 WORKDIR /app
 COPY package.json package-lock.json ./
 RUN npm install
@@ -24,10 +23,6 @@ ENV NEXT_TELEMETRY_DISABLED 1
 
 # You only need to copy next.config.js if you are NOT using the default configuration
 # COPY --from=builder /app/next.config.js ./
-COPY --from=builder /app/public ./public
-COPY --from=builder /app/package.json ./package.json
-COPY --from=builder /app/.next ./.next
-COPY --from=builder /app/node_modules ./node_modules
-
+COPY . .
 
 CMD ["pm2-runtime","npm","--","start"]

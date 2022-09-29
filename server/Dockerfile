@@ -1,5 +1,4 @@
-FROM node:16-alpine
-RUN apk add --no-cache libc6-compat
+FROM node:16
 WORKDIR /api
 COPY package.json package-lock.json ./
 #RUN npm install -g nodemon
