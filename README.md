@@ -4,7 +4,7 @@
 
 This is a starter template for NextJS + TailwindCSS
 
-
+ 
 ## Production Build
 The image created by docker is a ready to go NextJS build application with NGINX webserver and PM2
 
