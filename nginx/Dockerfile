@@ -1,4 +1,4 @@
-FROM nginx:alpine
+FROM nginx
 
 # Remove any existing config files
 RUN rm /etc/nginx/conf.d/*
@@ -10,6 +10,6 @@ COPY ./default.conf /etc/nginx/conf.d/
 # Expose the listening port
 EXPOSE 80
 EXPOSE 3000
-EXPOSE 4000
+EXPOSE 9100
 # Launch NGINX
 CMD [ "nginx", "-g", "daemon off;" ]

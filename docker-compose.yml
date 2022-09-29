@@ -2,10 +2,10 @@ version: '3'
 services:
   nextjs: 
     build: 
-      context: .
+      context: ./app
     container_name: "nextjs"
     volumes:
-      - ./:/var/app/current
+      - .:/var/app/current
     ports: 
       - 3000:3000
     networks: 
