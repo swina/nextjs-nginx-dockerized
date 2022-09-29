@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next build && next start"
   },
   "dependencies": {
     "next": "latest",
@@ -16,5 +16,9 @@
     "autoprefixer": "^10.4.4",
     "postcss": "^8.4.12",
     "tailwindcss": "^3.0.23"
+  },
+   "engines" : { 
+    "npm" : ">=7.0.0",
+    "node" : ">=16.0.0"
   }
 }
